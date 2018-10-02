@@ -32,7 +32,7 @@ export class TodoListComponent implements OnInit {
 
   addNewTodo(){
   if(this.newTodo !== ""){
-    this.todos.push({id: this.todos.length+1,name: this.newTodo, done:false)
+    this.todos.push({id: this.todos.length+1,name: this.newTodo, done:false),
         this.newTodo="";
     }
     
