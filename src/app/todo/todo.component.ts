@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-todo',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  constructor() { }
+  name: string;
+
+
+  constructor(private route: ActivatedRoute) {
+    
+  }
 
   ngOnInit() {
+    this.route.params.subscribe(({name}) => this.name = name);
   }
 
 }
